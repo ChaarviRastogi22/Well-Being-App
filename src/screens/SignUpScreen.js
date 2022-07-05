@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image, Button} from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import AuthForm from "../components/AuthForm";
@@ -26,12 +26,19 @@ const SignUpScreen = ({ navigation }) => {
         <AuthForm />
         <View>
     <TouchableOpacity
-        style = {{backgroundColor: '#00bbc4', borderRadius: 25, margin: 10, width: 200, alignItems: 'center', justifyContent: 'center'}}
-        onPress = {() => navigation.navigate('Home')} >
-            <Text style = {{fontSize: 20}}>
+        style = {{backgroundColor: '#00bbc4', borderRadius: 25, margin: 10, width: 200, alignItems: 'center', justifyContent: 'center', height: 35}}
+        onPress = {() => navigation.navigate('Start')} >
+            <Text style = {{fontSize: 20, color: 'white'}}>
                 Sign Up
             </Text>
-    </TouchableOpacity> 
+    </TouchableOpacity>
+    <TouchableOpacity
+        style = {{backgroundColor: '#00bbc4', borderRadius: 25, margin: 10, width: 200, alignItems: 'center', justifyContent: 'center', height: 35}}
+        onPress = {() => navigation.navigate('mainFlow')} >
+            <Text style = {{fontSize: 20, color: 'white'}}>
+                Go to mainflow
+            </Text>
+    </TouchableOpacity>
     </View>
     </View>
     </View>
@@ -56,16 +63,13 @@ const styles = StyleSheet.create({
     backgroundStyle: {
         backgroundColor: '#effafb',
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
     logo: {
         height: 150,
         width: 150,
         margin: 30,
         marginLeft: 50
-    },
-    buttonStyle: {
-        borderRadius: 20,
     }
 });
 

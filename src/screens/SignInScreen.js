@@ -32,7 +32,7 @@ const SignInScreen = ({ navigation }) => {
                 <View style = {{ justifyContent: 'center', alignItems :'center'}}>
                 <TouchableOpacity 
                 style = {styles.LoginButton}
-                onPress = {() => navigation.navigate('Home')}>
+                onPress = {() => navigation.navigate('mainFlow')}>
                     <Text style = {{fontSize : 20, color: 'white'}}>
                     Login
                     </Text>

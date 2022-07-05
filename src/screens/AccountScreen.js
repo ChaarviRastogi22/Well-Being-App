@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native-web";
+import { View, Text, StyleSheet, Button } from "react-native-web";
 
 const AccountScreen = () => {
-    return 
+    return(
     <View>
-        <Text>This is the Account screen</Text>
+        <Text>This is the account screen</Text>
     </View>
-};
+)};
 
 const styles = StyleSheet.create({});
 
