@@ -1,38 +1,25 @@
 import React from 'react';
 import { View, Text, StyleSheet,TouchableOpacity, TextInput, Button} from 'react-native';
-import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Carousel from '../components/Carousel';
 import { LinearGradient } from 'expo-linear-gradient';
+import CurrentDate from '../components/CurrentDate';
 
 const HomeScreen = ({navigation}) => {
+    var date = new Date().getDate();
     return (
-        <> 
-            <View style = {{
-              backgroundColor: '#00bbc4', 
-              alignItems: 'center',
-              borderRadius: 20
-            }}
-            >
-                <AntDesign size={30} name="home" color="white" /> 
-            </View>
-
+        <>
             <View style = {styles.homescreenStyle}>
                 <LinearGradient colors = {["#eafffa","#c6fce5","#6ef3d6", "#0ecedb"]}>
+                    <CurrentDate />
                     <Carousel />
                     <TouchableOpacity 
                         style = {styles.buttonStyling}
-                        onPress = {() => navigation.navigate('Audio')}
+                        onPress = {() => navigation.navigate('Lets get started')}
                     >
-                        <Text style = {styles.text}>Audios</Text>
+                        <Text style = {styles.text}>Let's get started</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style = {styles.buttonStyling} 
-                    onPress = {() => navigation.navigate('Video')}>
-                        <Text style = {styles.text}>Videos</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style = {styles.buttonStyling}
-                    onPress = {() => navigation.navigate('Worksheet')}>
-                        <Text style = {styles.text}>Worksheets</Text>
-                    </TouchableOpacity>
+                    <Text style = {{fontSize : '50'}}>1/30</Text>
                 </LinearGradient>
             </View> 
 
@@ -53,7 +40,7 @@ const styles = StyleSheet.create({
     buttonStyling : {
         height:40,
         alignItems: 'center',
-        margin: 15,
+        margin: 25,
         backgroundColor: '#00bbc4',
         borderRadius: 20,
         justifyContent: 'center'

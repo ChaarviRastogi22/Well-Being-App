@@ -7,14 +7,11 @@ import AuthForm from "../components/AuthForm";
 const SignInScreen = ({ navigation }) => {
     return( 
     <>
-        <View style = {{
-              backgroundColor: '#00bbc4', 
-              alignItems: 'center',
-        }}>
+        <View style = {{ backgroundColor: '#00bbc4',alignItems: 'center' }}>
                 <AntDesign size={30} name="login" color="white" /> 
         </View>
 
-        <View style = {{justifyContent: 'center', backgroundColor:'#effafb', flex: 1}}>
+        <View style = {{justifyContent: 'center', backgroundColor:'#c5faee', flex: 1}}>
             <Text style = {{fontSize:20, marginLeft: 20}}>
                 Hello User!
             </Text>

@@ -29,15 +29,14 @@ const AuthForm = () => {
 
 const styles = StyleSheet.create({
     fontStyle:{
-        fontSize:20, marginLeft: 20, marginTop: 30, color: 'gray'
+        fontSize:20, marginLeft: 20, marginTop: 30, color: 'black'
     },
     inputStyle: {
         margin: 10,
         fontSize: 20,
-        backgroundColor: 'white',
-        borderBottomWidth: 2,
+        borderBottomWidth: 1,
         width: 300,
-        borderRadius: 10
+        borderBottomColor: '#00bbc4'
     },
     
 });
