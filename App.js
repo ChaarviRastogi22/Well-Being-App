@@ -5,23 +5,19 @@ import { createSwitchNavigator, createAppContainer } from "react-navigation";
 import HomeScreen from "./src/screens/HomeScreen";
 import AboutUs from "./src/screens/AboutUs";
 import AccountScreen from "./src/screens/AccountScreen";
-import AudioScreen from "./src/screens/AudioScreen";
-import RateUs from "./src/screens/RateUs";
 import SignUpScreen from "./src/screens/SignUpScreen";
 import SignInScreen from "./src/screens/SignInScreen";
-import VideoScreen from "./src/screens/VideoScreen";
-import WorkSheetsScreen from "./src/screens/WorkSheetsScreen";
+import ActivityScreen from "./src/screens/ActivityScreen";
+import FirstMonth from "./src/Activities/FirstMonth";
 
 const Navigator = createStackNavigator({
     Signup: SignUpScreen,
     Signin: SignInScreen,
     Home: HomeScreen,
-    Video: VideoScreen,
-    Audio: AudioScreen,
-    Worksheet: WorkSheetsScreen,
+    Activity: ActivityScreen,
     Account: AccountScreen,
     About: AboutUs,
-    Rate: RateUs,
+    First: FirstMonth
     },
     {
       initialRouteName: 'Home',

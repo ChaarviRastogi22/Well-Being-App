@@ -13,13 +13,13 @@ const HomeScreen = ({navigation}) => {
                 <LinearGradient colors = {["#eafffa","#c6fce5","#6ef3d6", "#0ecedb"]}>
                     <CurrentDate />
                     <Carousel />
+                    <Text style = {{fontSize : 50, fontWeight: 'bold'}}>1/30</Text>
                     <TouchableOpacity 
                         style = {styles.buttonStyling}
-                        onPress = {() => navigation.navigate('Lets get started')}
+                        onPress = {() => navigation.navigate('Activity')}
                     >
                         <Text style = {styles.text}>Let's get started</Text>
                     </TouchableOpacity>
-                    <Text style = {{fontSize : '50'}}>1/30</Text>
                 </LinearGradient>
             </View> 
 
