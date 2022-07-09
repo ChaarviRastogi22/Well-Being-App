@@ -9,6 +9,11 @@ import SignUpScreen from "./src/screens/SignUpScreen";
 import SignInScreen from "./src/screens/SignInScreen";
 import ActivityScreen from "./src/screens/ActivityScreen";
 import FirstMonth from "./src/Activities/FirstMonth";
+import SecondMonth from "./src/Activities/SecondMonth";
+import ThirdMonth from "./src/Activities/ThirdMonth";
+import ForthMonth from "./src/Activities/ForthMonth";
+import FifthMonth from "./src/Activities/FifthMonth";
+import SixthMonth from "./src/Activities/SixthMonth";
 
 const Navigator = createStackNavigator({
     Signup: SignUpScreen,
@@ -17,7 +22,12 @@ const Navigator = createStackNavigator({
     Activity: ActivityScreen,
     Account: AccountScreen,
     About: AboutUs,
-    First: FirstMonth
+    First: FirstMonth,
+    Second: SecondMonth,
+    Third: ThirdMonth,
+    Forth: ForthMonth,
+    Fifth: FifthMonth,
+    Sixth: SixthMonth
     },
     {
       initialRouteName: 'Home',

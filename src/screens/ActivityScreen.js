@@ -21,31 +21,36 @@ const ActivityScreen = ( {navigation} ) => {
                     style = {styles.buttonStyling}
                     onPress = {()=> navigation.navigate('First')}
                 >
-                    <Text style = {{color: 'white', fontSize: 20}}>1st Month</Text>
+                    <Text style = {styles.buttonFont}>1st Month</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style = {styles.buttonStyling}>
-                <Text style = {{color: 'white', fontSize: 20}}>2nd Month</Text>
-                </TouchableOpacity>
-            </View>
-
-            <View style = {{flexDirection: 'row'}}>
-                <TouchableOpacity style = {styles.buttonStyling}>
-                <Text style = {{color: 'white', fontSize: 20}}>3rd Month</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style = {styles.buttonStyling}>
-                <Text style = {{color: 'white', fontSize: 20}}>4th Month</Text>
+                <TouchableOpacity style = {styles.buttonStyling} 
+                onPress = {()=> navigation.navigate('Second')}>
+                <Text style = {styles.buttonFont}>2nd Month</Text>
                 </TouchableOpacity>
             </View>
 
             <View style = {{flexDirection: 'row'}}>
-                <TouchableOpacity style = {styles.buttonStyling}>
-                <Text style = {{color: 'white', fontSize: 20}}>5th Month</Text>
+                <TouchableOpacity style = {styles.buttonStyling}
+                onPress = {()=> navigation.navigate('Third')}>
+                <Text style = {styles.buttonFont}>3rd Month</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style = {styles.buttonStyling}>
-                <Text style = {{color: 'white', fontSize: 20}}>6th Month</Text>
+                <TouchableOpacity style = {styles.buttonStyling}
+                onPress = {()=> navigation.navigate('Forth')}>
+                <Text style = {styles.buttonFont}>4th Month</Text>
+                </TouchableOpacity>
+            </View>
+
+            <View style = {{flexDirection: 'row'}}>
+                <TouchableOpacity style = {styles.buttonStyling}
+                onPress = {()=> navigation.navigate('Fifth')}>
+                <Text style = {styles.buttonFont}>5th Month</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style = {styles.buttonStyling}
+                onPress = {()=> navigation.navigate('Sixth')}>
+                <Text style = {styles.buttonFont}>6th Month</Text>
                 </TouchableOpacity>
             </View>
             </View>
@@ -72,6 +77,10 @@ const styles = StyleSheet.create({
     margin: 25,
     borderBottomWidth: 4,
     borderBottomColor: 'white'
+    },
+    buttonFont: {
+        color: 'white', 
+        fontSize: 20
     }
 });
 

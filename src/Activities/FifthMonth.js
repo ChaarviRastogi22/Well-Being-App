@@ -6,7 +6,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-const FirstMonth = () => {
+const FifthMonth = () => {
     return (
         <>
         <View style = {{flex: 1,flexDirection: 'row'}}>
@@ -59,4 +59,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default FirstMonth;
+export default FifthMonth;
