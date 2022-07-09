@@ -12,7 +12,7 @@ const CurrentDate = () => {
 
   return (
     <View style={styles.dateContainer}>
-      <Text style={styles.dateText}>{'Current Date'} - {date}</Text>
+      <Text style={styles.dateText}>{date}</Text>
     </View>
   );
 }
@@ -20,12 +20,12 @@ const CurrentDate = () => {
 const styles = StyleSheet.create({
     dateContainer: {
         alignItems: 'center', 
-        marginTop: 5
+        marginLeft: 80
     },
     dateText: {
         fontWeight: 'bold', 
-        fontSize: 20, 
-        color: '#0b4d4c'
+        fontSize: 25, 
+        color: '#010080'
     }
 });
 
