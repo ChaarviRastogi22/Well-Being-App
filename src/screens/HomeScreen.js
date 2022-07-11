@@ -2,18 +2,19 @@ import React from 'react';
 import { View, Text, StyleSheet,TouchableOpacity, TextInput, Button} from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
+//
 import Carousel from '../components/Carousel';
 import { LinearGradient } from 'expo-linear-gradient';
 import CurrentDate from '../components/CurrentDate';
-
 const HomeScreen = ({navigation}) => {
     return (
         <>
             <View style = {styles.homescreenStyle}>
                 <LinearGradient colors = {["#eafffa","#c6fce5","#6ef3d6", "#0ecedb"]}>
                     <View style = {styles.currentDateBar}>
-                        <TouchableOpacity>
-                            <Entypo name="menu" size={40} color="#010080" />
+                        <TouchableOpacity 
+                        onPress = {() => {navigation.navigate('menuFlow')}}>
+                        <Entypo name="menu" size={40} color="#010080" />
                         </TouchableOpacity>
 
                         <CurrentDate />
@@ -89,3 +90,5 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+
+/**  */

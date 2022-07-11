@@ -5,6 +5,7 @@ import Spacer from "../components/Spacer";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
+import Video from "react-native-video";
 
 const FirstMonth = () => {
     return (
@@ -60,3 +61,5 @@ const styles = StyleSheet.create({
 });
 
 export default FirstMonth;
+
+/** */

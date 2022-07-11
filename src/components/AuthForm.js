@@ -1,41 +1,41 @@
-import React from "react";
-import {Text, View, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import React, {useState} from "react";
+import {View, StyleSheet} from 'react-native';
+import {Input } from 'react-native-elements';
+import Spacer from "./Spacer";
 
 const AuthForm = () => {
-    return(
-        <>
-        <View>
-            <Text style = {styles.fontStyle}>Email</Text>
+    const [email, setEmail] = useState('');
+    const [Password, setPassword] = useState('');
 
-            <TextInput 
+    return(
+        <View style = {styles.container}>
+            <Input 
                 style = {styles.inputStyle}
-                placeholder = "example@email.com"
                 autoCapitalize="none"
                 autoCorrect={false}
+                label = "Email"
+                onChangeText={setEmail}
             />
-
-            <Text style = {styles.fontStyle}>Password</Text>
-
-            <TextInput 
+            <Spacer />
+            <Input
                 style = {styles.inputStyle}
-                placeholder = "your_password"
+                label = "Password"
                 secureTextEntry
                 autoCapitalize= "none"
                 autoCorrect = {false}
             />
         </View>
-    </>
 )};
 
 const styles = StyleSheet.create({
+    container: {
+        margin: 20,
+    },
     fontStyle:{
-        fontSize:20, marginLeft: 20, marginTop: 30, color: 'black'
+        fontSize:20, marginLeft: 20, marginTop: 30
     },
     inputStyle: {
-        margin: 10,
         fontSize: 20,
-        borderBottomWidth: 1,
-        width: 300,
         borderBottomColor: '#00bbc4'
     },
     

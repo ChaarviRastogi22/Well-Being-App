@@ -14,27 +14,32 @@ import ThirdMonth from "./src/Activities/ThirdMonth";
 import ForthMonth from "./src/Activities/ForthMonth";
 import FifthMonth from "./src/Activities/FifthMonth";
 import SixthMonth from "./src/Activities/SixthMonth";
+import { Provider as AuthProvider } from "./src/context/AuthContext";
 
-const Navigator = createStackNavigator({
-    Signup: SignUpScreen,
-    Signin: SignInScreen,
-    Home: HomeScreen,
-    Activity: ActivityScreen,
-    Account: AccountScreen,
-    About: AboutUs,
-    First: FirstMonth,
-    Second: SecondMonth,
-    Third: ThirdMonth,
-    Forth: ForthMonth,
-    Fifth: FifthMonth,
-    Sixth: SixthMonth
-    },
-    {
-      initialRouteName: 'Home',
-      defaultNavigationOptions: {
-        title: 'Home',
-      }
-    }
-);
+const Navigator = createSwitchNavigator({
+    loginFlow: createSwitchNavigator({
+        Signup: SignUpScreen,
+        Signin: SignInScreen,
+    }),
+    mainFlow: createStackNavigator({
+        Home: HomeScreen,
+        Activity: ActivityScreen,
+        First: FirstMonth,
+        Second: SecondMonth,
+        Third: ThirdMonth,
+        Forth: ForthMonth,
+        Fifth: FifthMonth,
+        Sixth: SixthMonth,
+        Account: AccountScreen,
+        About: AboutUs
+    })
+});
 
-export default createAppContainer(Navigator);
+const App = createAppContainer(Navigator);
+
+export default () => {
+  return(
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+)};
