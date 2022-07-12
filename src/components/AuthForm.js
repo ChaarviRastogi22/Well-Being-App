@@ -5,7 +5,7 @@ import Spacer from "./Spacer";
 
 const AuthForm = () => {
     const [email, setEmail] = useState('');
-    const [Password, setPassword] = useState('');
+    const [password, setPassword] = useState('');
 
     return(
         <View style = {styles.container}>
@@ -14,15 +14,18 @@ const AuthForm = () => {
                 autoCapitalize="none"
                 autoCorrect={false}
                 label = "Email"
+                value = {email}
                 onChangeText={setEmail}
             />
             <Spacer />
             <Input
                 style = {styles.inputStyle}
+                value = {password}
                 label = "Password"
                 secureTextEntry
                 autoCapitalize= "none"
                 autoCorrect = {false}
+                onChangeText = {setPassword}
             />
         </View>
 )};
