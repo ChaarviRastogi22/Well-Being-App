@@ -14,7 +14,10 @@ import ThirdMonth from "./src/Activities/ThirdMonth";
 import ForthMonth from "./src/Activities/ForthMonth";
 import FifthMonth from "./src/Activities/FifthMonth";
 import SixthMonth from "./src/Activities/SixthMonth";
+import WorksheetScreen from "./src/screens/WorksheetScreen";
+
 import { Provider as AuthProvider } from "./src/context/AuthContext";
+import { setNavigator } from "./src/navigationRef";
 
 const Navigator = createSwitchNavigator({
     loginFlow: createSwitchNavigator({
@@ -31,7 +34,8 @@ const Navigator = createSwitchNavigator({
         Fifth: FifthMonth,
         Sixth: SixthMonth,
         Account: AccountScreen,
-        About: AboutUs
+        About: AboutUs,
+        Work: WorksheetScreen
     })
 });
 
@@ -40,6 +44,10 @@ const App = createAppContainer(Navigator);
 export default () => {
   return(
     <AuthProvider>
-      <App />
+      <App
+            ref={(navigator) => {
+              setNavigator(navigator);
+            }}
+          />
     </AuthProvider>
 )};

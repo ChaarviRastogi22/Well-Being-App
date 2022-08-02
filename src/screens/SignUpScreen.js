@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
-import { View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { Text, Input } from 'react-native-elements';
 import { Context as AuthContext } from '../context/AuthContext';
+import Spacer from '../components/Spacer';
 
 const SignUpScreen = ({ navigation }) => {
   const { state, signup } = useContext(AuthContext);
@@ -10,8 +11,12 @@ const SignUpScreen = ({ navigation }) => {
   const [name, setName] = useState('');
   const [contact, setContact] = useState(null);
 
+  console.log(state);
+
   return (
     <>
+    <ScrollView
+      showsVerticalScrollIndicator = {true}>
       <View style = {styles.container}>
           <Text style = {{fontSize: 25, marginTop: 50}}>Welcome User</Text>
           <Text>Sign up to continue</Text>
@@ -19,6 +24,7 @@ const SignUpScreen = ({ navigation }) => {
               style = {styles.logo}
               source = {require('../../assets/images.png')}
           />
+          <Spacer />
       <View style = {{justifyContent: 'center'}}>
       <Input
         label="Name"
@@ -47,11 +53,14 @@ const SignUpScreen = ({ navigation }) => {
         onChangeText={setContact}
       />
       </View>
+
+      {state.errorMessage ? <Text style = {styles.errorText}>{state.errorMessage}</Text> : null }
+      
       <View style = {{alignItems: 'center', justifyContent: 'space-around'}}>
         <TouchableOpacity 
         style = {styles.buttonStyling}
           onPress={() => signup({ email, password, name, contact })} >
-            <Text style = {{justifyContent: 'center', alignItems: 'center', color: 'white'}}>Sign up</Text>
+            <Text style = {{justifyContent: 'center', alignItems: 'center', color: 'white', fontSize: 15}}>Sign up</Text>
           </TouchableOpacity>
         <TouchableOpacity 
           style = {styles.buttonStyling}
@@ -60,6 +69,7 @@ const SignUpScreen = ({ navigation }) => {
             </TouchableOpacity>
         </View>
     </View>
+    </ScrollView>
     </>
   );
 };
@@ -84,6 +94,10 @@ const styles = StyleSheet.create({
         width: 200,
         justifyContent: 'center',
         marginTop: 30
+      },
+      errorText: {
+        fontSize: 20,
+        color: 'red'
       }
 });
 

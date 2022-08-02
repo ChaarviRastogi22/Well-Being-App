@@ -7,7 +7,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import Video from "react-native-video";
 
-const FirstMonth = () => {
+const FirstMonth = ({navigation}) => {
     return (
         <>
         <View style = {{flex: 1,flexDirection: 'row'}}>
@@ -34,7 +34,8 @@ const FirstMonth = () => {
             </View>
             <Spacer>
                 <Text style= {{fontWeight: 'bold', fontSize: 50}}>Worksheet</Text>
-                <TouchableOpacity>
+                <TouchableOpacity
+                    onPress={()=>navigation.navigate('Work')}>
                 <FontAwesome5 name="file" size={24} color="black" />
                 </TouchableOpacity>
             </Spacer>
